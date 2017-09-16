@@ -1,0 +1,6 @@
+framework module Pods_trafficAI {
+  umbrella header "Pods-trafficAI-umbrella.h"
+
+  export *
+  module * { export * }
+}

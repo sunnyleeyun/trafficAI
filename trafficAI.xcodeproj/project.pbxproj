@@ -12,6 +12,7 @@
 		04ADE8501F6C218900A4BDDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ADE84E1F6C218900A4BDDC /* Main.storyboard */; };
 		04ADE8521F6C218900A4BDDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04ADE8511F6C218900A4BDDC /* Assets.xcassets */; };
 		04ADE8551F6C218900A4BDDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ADE8531F6C218900A4BDDC /* LaunchScreen.storyboard */; };
+		128B52CBA4EB203A75A35D10 /* Pods_trafficAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBF82451997E961B6DECA67 /* Pods_trafficAI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		04ADE8511F6C218900A4BDDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04ADE8541F6C218900A4BDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04ADE8561F6C218900A4BDDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12CB370B00B5273BD1875095 /* Pods-trafficAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trafficAI.release.xcconfig"; path = "Pods/Target Support Files/Pods-trafficAI/Pods-trafficAI.release.xcconfig"; sourceTree = "<group>"; };
+		172E07B8D3A61A23DCA77FE9 /* Pods-trafficAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trafficAI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trafficAI/Pods-trafficAI.debug.xcconfig"; sourceTree = "<group>"; };
+		7FBF82451997E961B6DECA67 /* Pods_trafficAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trafficAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128B52CBA4EB203A75A35D10 /* Pods_trafficAI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				04ADE8491F6C218900A4BDDC /* trafficAI */,
 				04ADE8481F6C218900A4BDDC /* Products */,
+				7F483C94A14E90FA784135E3 /* Pods */,
+				2B21C051C1FF79C4A4DD8FAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = trafficAI;
 			sourceTree = "<group>";
 		};
+		2B21C051C1FF79C4A4DD8FAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FBF82451997E961B6DECA67 /* Pods_trafficAI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F483C94A14E90FA784135E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				172E07B8D3A61A23DCA77FE9 /* Pods-trafficAI.debug.xcconfig */,
+				12CB370B00B5273BD1875095 /* Pods-trafficAI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04ADE8591F6C218900A4BDDC /* Build configuration list for PBXNativeTarget "trafficAI" */;
 			buildPhases = (
+				28D99F86AAFACE54E34E5C69 /* [CP] Check Pods Manifest.lock */,
 				04ADE8431F6C218900A4BDDC /* Sources */,
 				04ADE8441F6C218900A4BDDC /* Frameworks */,
 				04ADE8451F6C218900A4BDDC /* Resources */,
+				C90000FD3BEAB2E2CB4330BF /* [CP] Embed Pods Frameworks */,
+				41DF3CAB24140F69EF0236C2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28D99F86AAFACE54E34E5C69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-trafficAI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41DF3CAB24140F69EF0236C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trafficAI/Pods-trafficAI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C90000FD3BEAB2E2CB4330BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-trafficAI/Pods-trafficAI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ApiAI/ApiAI.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ApiAI.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trafficAI/Pods-trafficAI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04ADE8431F6C218900A4BDDC /* Sources */ = {
@@ -261,6 +342,7 @@
 		};
 		04ADE85A1F6C218900A4BDDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172E07B8D3A61A23DCA77FE9 /* Pods-trafficAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VJGEDW5SA9;
@@ -274,6 +356,7 @@
 		};
 		04ADE85B1F6C218900A4BDDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12CB370B00B5273BD1875095 /* Pods-trafficAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VJGEDW5SA9;
